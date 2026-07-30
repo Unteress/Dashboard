@@ -24,3 +24,8 @@ RUN composer install --no-dev --optimize-autoloader
 
 # Dar permisos a las carpetas de almacenamiento
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Copiar el script de inicio, darle permisos y ejecutarlo
+COPY start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+CMD ["/usr/local/bin/start.sh"]
