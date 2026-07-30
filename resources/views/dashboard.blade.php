@@ -43,21 +43,21 @@
         }
     </style>
 </head>
-<body class="p-6 md:p-10 font-sans text-gray-800 antialiased selection:bg-blue-300 relative overflow-x-hidden">
+<body class="p-3 sm:p-6 md:p-10 font-sans text-gray-800 antialiased selection:bg-blue-300 relative overflow-x-hidden">
     
     <div class="max-w-[1400px] mx-auto space-y-8 pb-20">
         
         <!-- Header con Toggle -->
-        <header class="glass-panel p-6 md:p-8 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-4 transition-transform duration-300 hover:scale-[1.01]">
-            <div>
-                <h1 class="text-3xl md:text-4xl font-extrabold text-blue-900 tracking-tight">Dashboard de Gestión</h1>
-                <p class="text-blue-700 mt-2 font-medium text-lg">Consultora Líderes 2026 - Clima Organizacional</p>
+        <header class="glass-panel p-5 md:p-8 rounded-3xl flex flex-col xl:flex-row xl:items-center justify-between gap-6 transition-transform duration-300 hover:scale-[1.01]">
+            <div class="text-center xl:text-left">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-900 tracking-tight">Dashboard de Gestión</h1>
+                <p class="text-blue-700 mt-1 md:mt-2 font-medium text-sm sm:text-base md:text-lg">Consultora Líderes 2026 - Clima Organizacional</p>
             </div>
             
             <!-- Controles (Privacidad & IA) -->
-            <div class="flex items-center gap-4">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full xl:w-auto">
                 <!-- Botón IA -->
-                <button id="aiButton" class="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-5 py-3 rounded-2xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 font-bold group">
+                <button id="aiButton" class="w-full sm:w-auto flex justify-center items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-5 py-3 rounded-2xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 font-bold group">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:animate-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
@@ -65,9 +65,9 @@
                 </button>
                 
                 <!-- Toggle Privacidad -->
-                <div class="flex items-center gap-3 bg-white/50 px-4 py-3 rounded-2xl border border-white/60 shadow-inner">
-                    <span class="text-sm font-bold text-gray-700">Modo Privacidad</span>
-                    <div class="relative inline-block w-12 align-middle select-none transition duration-200 ease-in">
+                <div class="w-full sm:w-auto flex justify-center items-center gap-3 bg-white/50 px-4 py-3 rounded-2xl border border-white/60 shadow-inner">
+                    <span class="text-sm font-bold text-gray-700 whitespace-nowrap">Modo Privacidad</span>
+                    <div class="relative inline-block w-12 align-middle select-none transition duration-200 ease-in flex-shrink-0">
                         <input type="checkbox" name="toggle" id="privacyToggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0"/>
                         <label for="privacyToggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer transition-colors duration-300"></label>
                     </div>
@@ -280,7 +280,7 @@
             </div>
             
             <!-- Chat Area -->
-            <div id="aiChatArea" class="flex-grow p-6 overflow-y-auto bg-slate-50 space-y-6">
+            <div id="aiChatArea" class="flex-grow p-4 md:p-6 overflow-y-auto bg-slate-50 space-y-4 md:space-y-6">
                 <!-- Mensaje Inicial de la IA -->
                 <div class="flex gap-4">
                     <div class="bg-indigo-600 text-white p-3 rounded-full h-10 w-10 flex-shrink-0 flex items-center justify-center shadow-md">
@@ -294,8 +294,8 @@
             </div>
 
             <!-- Input Area con Prompts -->
-            <div class="bg-white border-t border-gray-200 p-4">
-                <div class="flex flex-wrap gap-2 mb-2" id="aiPromptsContainer">
+            <div class="bg-white border-t border-gray-200 p-3 md:p-4">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-1" id="aiPromptsContainer">
                     <button onclick="sendAiPrompt(1, 'Analizar causas profundas del Burnout (62%)')" class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 px-4 py-2 rounded-full text-sm font-semibold transition-colors">
                         🔥 Analizar Burnout
                     </button>
